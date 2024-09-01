@@ -1,0 +1,9 @@
+.compare-products {
+    margin-left: 220px;
+    padding-top: 60px;
+}
+
+.modal .ant-table {
+    max-height: 400px;
+    overflow: auto;
+}

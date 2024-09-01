@@ -1,0 +1,9 @@
+.modal {
+    height: 400px;
+    width: 200px;
+}
+
+.modal .ant-table {
+    height: 300px;
+    overflow-y: auto;
+}

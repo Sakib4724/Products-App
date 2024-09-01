@@ -1,10 +1,13 @@
-import React from "React";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from "./src/App";
 import Error from "./src/components/Error";
-import Body from "./src/components/Body";
-import ProuductTable from "./src/components/ProductTable";
+import About from "./src/components/About";
+import Contact from "./src/components/Contact";
+import ProductDetails from "./src/components/ProductDetails";
+import ComparePage from "./src/components/ComparePage";
+import { ProductProvider } from './src/utils/ProductContext'
 
 const appRouter = createBrowserRouter([
     {
@@ -14,21 +17,33 @@ const appRouter = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Body />
+                element: <ProductDetails />
             },
-
             {
-                path: "/products",
-                element: <ProuductTable />
+                path: "/about",
+                element: <About />
+            },
+            {
+                path: "/contact",
+                element: <Contact />
+            },
+            {
+                path: "/product-details",
+                element: <ProductDetails />
+            },
+            {
+                path: "/compare-products",
+                element: <ComparePage />
             }
         ]
     }
-])
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <RouterProvider router={appRouter}>
-        <AppLayout />
-    </RouterProvider>
-
+    <ProductProvider>
+        <RouterProvider router={appRouter}>
+            <AppLayout />
+        </RouterProvider>
+    </ProductProvider>
 );

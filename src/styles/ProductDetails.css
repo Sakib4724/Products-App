@@ -1,0 +1,101 @@
+.product-details {
+    margin-left: 250px;
+    margin-top: 20px;
+    padding-top: 60px;
+    transition: margin-left 0.3s;
+    overflow-x: auto;
+}
+
+.product-details .ant-table {
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-details .ant-table:hover {
+    background-color: #fef9c3;
+}
+
+.compare-button {
+    background-color: #991b1b;
+    color: white;
+    font-weight: bold;
+}
+
+.product-details .ant-pagination-item {
+    background-color: #f0f0f0;
+    border-color: #d9d9d9;
+}
+
+.product-details .ant-pagination-item a {
+    color: #000 !important;
+}
+
+.product-details .ant-pagination-item-active {
+    background-color: #991b1b !important;
+}
+
+.product-details .ant-pagination-item-active a {
+    color: white !important;
+}
+
+.product-details .ant-pagination-item:hover {
+    background-color: #e6f7ff;
+}
+
+.product-details .ant-pagination-item:hover a {
+    color: #1890ff !important;
+}
+
+.product-details .ant-pagination-next .ant-pagination-item-link,
+.product-details .ant-pagination-prev .ant-pagination-item-link {
+    background-color: #f0f0f0;
+    border-color: #d9d9d9;
+}
+
+.product-details .ant-pagination-next .ant-pagination-item-link:hover,
+.product-details .ant-pagination-prev .ant-pagination-item-link:hover {
+    background-color: #e6f7ff;
+    border-color: #1890ff;
+}
+
+@media (max-width: 1024px) {
+    .product-details {
+        margin-left: 200px;
+        padding: 10px;
+        margin-top: 60px;
+    }
+
+    .product-details .ant-table {
+        font-size: 14px;
+    }
+
+    .compare-button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-details {
+        margin-left: 0;
+        padding: 5px;
+        
+    }
+
+    .product-details .ant-table {
+        font-size: 12px;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .compare-button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .product-details .ant-pagination {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
